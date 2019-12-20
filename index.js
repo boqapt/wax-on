@@ -147,7 +147,7 @@ function blockHelper (name, options) {
 
         }
     
-        if (oldStack.length === 0 || options.data.last) {
+        if (oldStack.length === 0 || options.data.last || options.data.last === undefined) {
             // remove the block if block is not inherited, or there is no loop or there is a loop which was finished
             delete blocks[name];
         } else {
